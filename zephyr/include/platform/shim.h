@@ -61,18 +61,6 @@
 #define IPC_IDCIETC_DONE	(1 << 30)
 #define IPC_IDCIETC_MSG_MASK	0x3FFFFFFF
 
-
-
-static inline uint32_t shim_read(uint32_t reg)
-{
-	return *((volatile uint32_t*)(SHIM_BASE + reg));
-}
-
-static inline void shim_write(uint32_t reg, uint32_t val)
-{
-	*((volatile uint32_t*)(SHIM_BASE + reg)) = val;
-}
-
 static inline uint64_t shim_read64(uint32_t reg)
 {
 	return *((volatile uint64_t*)(SHIM_BASE + reg));
@@ -113,16 +101,6 @@ static inline uint32_t irq_read(uint32_t reg)
 static inline void irq_write(uint32_t reg, uint32_t val)
 {
 	*((volatile uint32_t*)(IRQ_BASE + reg)) = val;
-}
-
-static inline uint32_t ipc_read(uint32_t reg)
-{
-	return *((volatile uint32_t*)(IPC_HOST_BASE + reg));
-}
-
-static inline void ipc_write(uint32_t reg, uint32_t val)
-{
-	*((volatile uint32_t*)(IPC_HOST_BASE + reg)) = val;
 }
 
 static inline uint32_t idc_read(uint32_t reg, uint32_t core_id)

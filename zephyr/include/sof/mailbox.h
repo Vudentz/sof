@@ -46,17 +46,6 @@
 	MAILBOX_DEBUG_SIZE
 
 static inline
-void mailbox_dspbox_write(size_t offset, const void *src, size_t bytes)
-{
-}
-
-static inline
-void mailbox_dspbox_read(void *dest, size_t dest_size,
-			 size_t offset, size_t bytes)
-{
-}
-
-static inline
 void mailbox_hostbox_write(size_t offset, const void *src, size_t bytes)
 {
 }
@@ -69,11 +58,6 @@ void mailbox_hostbox_read(void *dest, size_t dest_size,
 
 static inline
 void mailbox_stream_write(size_t offset, const void *src, size_t bytes)
-{
-}
-
-static inline
-void mailbox_sw_reg_write(size_t offset, uint32_t src)
 {
 }
 
